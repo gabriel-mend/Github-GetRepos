@@ -27,6 +27,8 @@ const Repos:React.FC = ({ data }: any) => {
     )
 }
 
+export default Repos;
+
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     const res = await fetch(`https://gh-pinned-repos.now.sh/?username=${query.id}`)
     const data = await res.json()
@@ -42,5 +44,3 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     }
   }
   
-
-export default Repos;
