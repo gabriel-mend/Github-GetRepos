@@ -30,17 +30,17 @@ const Repos:React.FC = ({ data }: any) => {
 export default Repos;
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-    const res = await fetch(`https://gh-pinned-repos.now.sh/?username=${query.id}`)
-    const data = await res.json()
+  const res = await fetch(`https://gh-pinned-repos.now.sh/?username=${query.id}`)
+  const data = await res.json()
 
-    if (!data) {
-      return {
-        notFound: true,
-      }
-    }
-
+  if (!data) {
     return {
-      props: { data },
+      notFound: true,
     }
   }
+
+  return {
+    props: { data },
+  }
+}
   
