@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { ChangeEvent, useState } from 'react';
+import { useState } from 'react';
 
 import * as Styles from 'styles/home';
 
