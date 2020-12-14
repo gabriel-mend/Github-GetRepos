@@ -12,7 +12,7 @@ interface RepoProps {
 }[]
 
 
-const Repos:React.FC = ({ data }: any) => {
+const ReposPage:React.FC = ({ data }: any) => {
     const router = useRouter()
     const { id } = router.query
 
@@ -27,7 +27,7 @@ const Repos:React.FC = ({ data }: any) => {
     )
 }
 
-export default Repos;
+export default ReposPage;
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const res = await fetch(`https://gh-pinned-repos.now.sh/?username=${query.id}`)
