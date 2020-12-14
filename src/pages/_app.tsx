@@ -7,8 +7,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Github GetRepos</title>
-        {/* <link rel="shortcut icon" href="/favicon.ico" /> */}
+        <title>Github Repos</title>
+        <link rel="shortcut icon" href="/img/github-icon.svg" />
         <meta 
           name="description" 
           content="A simple project starter to work NextJs, Typescript, React and Styled Components"

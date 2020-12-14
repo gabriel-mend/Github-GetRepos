@@ -3,16 +3,19 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 
 interface RepoProps {
-    owner: string,
-    repo: string,
-    description: string,
-    language: string,
-    stars: string,
-    forks: string
+  owner: string,
+  repo: string,
+  description: string,
+  language: string,
+  stars: string,
+  forks: string
+}[]
+
+interface Props {
+  
 }
 
-
-const Repos:React.FC = ({ data }) => {
+const Repos:React.FC<Props> = ({ data }: any) => {
     const router = useRouter()
     const { id } = router.query
 

@@ -14,9 +14,10 @@ const Home = () => {
     }
     return (
         <Styles.Main>
-            <Styles.Logo src="GitHub-logo.png" />
-            <input 
+            <Styles.Logo src="/img/GitHub-logo.png" />
+            <Styles.Input 
                 type="text"
+                placeholder="Nome do usuário no Github"
                 value={user}
                 onChange={(e) => setUser(e.target.value)}
             />
