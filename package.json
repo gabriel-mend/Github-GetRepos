@@ -1,9 +1,11 @@
 {
-  "name": "next-getrepos",
+  "name": "next-repos",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "next build",
+    "start": "next start",
     "dev": "next dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

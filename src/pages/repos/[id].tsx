@@ -11,11 +11,8 @@ interface RepoProps {
   forks: string
 }[]
 
-interface Props {
-  
-}
 
-const Repos:React.FC<Props> = ({ data }: any) => {
+const Repos:React.FC = ({ data }: any) => {
     const router = useRouter()
     const { id } = router.query
 
