@@ -2,6 +2,8 @@ import { GetServerSideProps } from 'next';
 
 import { useRouter } from 'next/router';
 
+import * as Styles from 'styles/pages/Repos';
+
 interface RepoProps {
   owner: string,
   repo: string,
@@ -13,18 +15,29 @@ interface RepoProps {
 
 
 const ReposPage:React.FC = ({ data }: any) => {
-    const router = useRouter()
-    const { id } = router.query
-
-    return (
-        <div>
-            <h1>{id}</h1>
-            {data.map((e: RepoProps) => (
-                <h1>{e.repo}</h1>
-            ))}
-        </div>
+  const router = useRouter()
+  const { id } = router.query
+  
+  return (
+    <Styles.Container>
+      <Styles.CardUser>
         
-    )
+      </Styles.CardUser>
+      <Styles.Main>
+        {data.map((e: RepoProps) => (
+          <Styles.RepoCard>
+            <div>
+              {e.stars} 
+              <img src="/img/star.svg" />
+            </div>
+            <h1>{e.repo}</h1>
+            <p>{e.description}</p>
+            <span>languange: {e.language}</span>
+          </Styles.RepoCard>
+        ))}
+      </Styles.Main>
+    </Styles.Container>
+  )
 }
 
 export default ReposPage;

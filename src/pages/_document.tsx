@@ -37,7 +37,13 @@ import Document, {
     render() {
       return (
         <Html lang="pt-BR">
-          <Head />
+          <Head>
+            <link rel="shortcut icon" href="/img/github-icon.svg" />
+            <meta 
+              name="description" 
+              content="A simple project starter to work NextJs, Typescript, React and Styled Components"
+            />
+          </Head>
           <body>
             <Main />
             <NextScript />

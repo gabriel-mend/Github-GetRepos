@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useState } from 'react';
 
-import * as Styles from 'styles/home';
+import * as Styles from 'styles/pages/Home';
 
 const Home = () => {
     const [user, setUser] = useState('');
