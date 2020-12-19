@@ -1,64 +1,28 @@
+import CardUser, { UserProps } from 'components/CardUser';
 import { GetServerSideProps } from 'next';
-import Link from 'next/link'
-
-import { useRouter } from 'next/router';
+import RepoCard, { RepoProps } from 'components/RepoCard';
 
 import * as Styles from 'styles/pages/Repos';
 
 interface Props {
   repos: [
-    RepoProps
+    RepoProps["repo"]
   ];
-  user: UserProps;
-}
-
-interface RepoProps {
-  owner: string,
-  repo: string,
-  description: string,
-  language: string,
-  stars: string,
-  forks: string
-}
-
-interface UserProps {
-  login: string;
-  name: string;
-  avatar_url: string;
+  user: UserProps["user"];
 }
 
 
 function ReposPage (props: Props) {
-  const router = useRouter()
-  const { id } = router.query;
-
   const { user } = props;
   const { repos } = props;
 
   return (
     <Styles.Container>
-      <Styles.CardUser>
-        <div>
-          <img src={user.avatar_url} alt=""/>
-          <h1>{user.name}</h1>
-        </div>
-      </Styles.CardUser>
+      <CardUser user={user} />
       <Styles.Main>
-        {repos.map((e: RepoProps) => {
+        {repos.map((e: RepoProps["repo"]) => {
           return (
-            <Styles.RepoCard>
-              <Link href={`https://github.com/${id}/${e.repo}`}>
-                <a>
-                  <div>
-                    {e.stars}
-                    <img src="/img/star.svg" />
-                  </div>
-                  <h1>{e.repo}</h1>
-                  <p>{e.description}</p>
-                  <span><b>languange:</b> {e.language}</span>
-                </a>
-              </Link>
-            </Styles.RepoCard>
+            <RepoCard repo={e} key={e.repo} />
           );
         })}
       </Styles.Main>
