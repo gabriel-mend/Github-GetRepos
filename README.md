@@ -9,8 +9,8 @@
 </p>
 
 ## 💬 Sobre o projeto
-Github-GetRepos - É um mini projeto feito em next com objetivo de pesquisar usuário no github e trazer os seus pinned repos(repositórios principais).
-Utilizei dele para por em prática os conceitos que estou estudando com [Next Js](https://nextjs.org), como boas práticas, [Styled Components](https://styled-components.com/) com SSR no next, Nextjs com [Typescript](https://www.typescriptlang.org/), reponsibilidade e entre outros. 😉
+Github-GetRepos - É um mini projeto feito em next com objetivo de pesquisar usuários no github e trazer os seus pinned repos (repositórios principais).
+Utilizei deste projeto para por em prática os conceitos que estou estudando com [Next Js](https://nextjs.org), como boas práticas, [Styled Components](https://styled-components.com/) com SSR no next, Nextjs com [Typescript](https://www.typescriptlang.org/), reponsibilidade e entre outros. 😉
 
 ## Tecnologias utilizadas
 * [Next Js](https://nextjs.org)
