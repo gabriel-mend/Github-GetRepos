@@ -5,7 +5,7 @@
  <a href="https://github.com/loadingGabriel/Github-GetRepos#-sobre-o-projeto">Sobre</a> •
  <a href="https://github.com/loadingGabriel/Github-GetRepos#tecnologias-utilizadas">Tecnologias</a> • 
  <a href="https://github.com/loadingGabriel/Github-GetRepos#-como-executar-o-projeto">Como executar o projeto</a> • 
- <a href="https://github.com/loadingGabriel/Github-GetRepos#">Autor</a>
+ <a href="https://github.com/loadingGabriel/Github-GetRepos#-sobre-mim">Autor</a>
 </p>
 
 <h4 align="center"> 
